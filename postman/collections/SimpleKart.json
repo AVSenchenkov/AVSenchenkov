@@ -38,22 +38,22 @@
 								}
 							]
 						},
-						"description": "# Get a list of items\n\nYou can use the `/items` endpoint to retrieve a list of items, you can indicate how many items to retrieve by changing the value of the `list` parameter in the query, e.g. to retrieve 3 items you can use\n`{{baseUrl}}/items?list=3`. "
+						"description": "# Get a list of items\n\nYou can use the `/items` endpoint to retrieve a list of items, you can indicate how many items to retrieve by changing the value of the `list` parameter in the query, e.g. to retrieve 3 items you can use  \n`{{baseUrl}}/items?list=3`."
 					},
 					"response": [
 						{
 							"id": "42c54d9e-4d78-4b31-b7f3-5923d304c2f6",
 							"name": "OK - Successful pull of items",
 							"originalRequest": {
-								"auth": {
-									"type": "noauth"
-								},
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{baseUrl}}/items?list=10",
+									"raw": "https://simplekart.postman.com/items?list=10",
+									"protocol": "https",
 									"host": [
-										"{{baseUrl}}"
+										"simplekart",
+										"postman",
+										"com"
 									],
 									"path": [
 										"items"
@@ -66,7 +66,7 @@
 										}
 									]
 								},
-								"description": "# Get a list of items\n\nYou can use the `/items` endpoint to retrieve a list of items, you can indicate how many items to retrieve by changing the value of the `list` parameter in the query, e.g. to retrieve 3 items you can use\n`{{baseUrl}}/items?list=3`. "
+								"description": "# Get a list of items\n\nYou can use the `/items` endpoint to retrieve a list of items, you can indicate how many items to retrieve by changing the value of the `list` parameter in the query, e.g. to retrieve 3 items you can use\n`https://simplekart.postman.com/items?list=3`. "
 							},
 							"status": "OK",
 							"code": 200,
@@ -105,10 +105,8 @@
 							],
 							"variable": [
 								{
-									"id": "b42e19a7-ff40-4535-ba90-8e390adf2bdc",
 									"key": "itemId",
-									"value": "",
-									"type": "string"
+									"value": ""
 								}
 							]
 						},
@@ -119,15 +117,15 @@
 							"id": "7885d59d-0b3d-459e-80b5-45b2dca1706d",
 							"name": "OK - Successfully obtained order details",
 							"originalRequest": {
-								"auth": {
-									"type": "noauth"
-								},
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{baseUrl}}/items/:itemId",
+									"raw": "https://simplekart.postman.com/items/:itemId",
+									"protocol": "https",
 									"host": [
-										"{{baseUrl}}"
+										"simplekart",
+										"postman",
+										"com"
 									],
 									"path": [
 										"items",
@@ -135,14 +133,12 @@
 									],
 									"variable": [
 										{
-											"id": "b42e19a7-ff40-4535-ba90-8e390adf2bdc",
 											"key": "itemId",
-											"value": "",
-											"type": "string"
+											"value": ""
 										}
 									]
 								},
-								"description": "# Get details of an item\n\nYou can retrieve the details of a single item that you know the id of by adding the `itemId` as a path variable, e.g. `{{baseUrl}}/items/1657`.\n\nAn item is represented as such:\n```\n{\n  \"itemId\": 1010,\n  \"name\": \"Item\",\n  \"price\": 10,\n  \"description\": \"Long description of the item\"\n}\n```"
+								"description": "# Get details of an item\n\nYou can retrieve the details of a single item that you know the id of by adding the `itemId` as a path variable, e.g. `https://simplekart.postman.com/items/1657`.\n\nAn item is represented as such:\n```\n{\n  \"itemId\": 1010,\n  \"name\": \"Item\",\n  \"price\": 10,\n  \"description\": \"Long description of the item\"\n}\n```"
 							},
 							"status": "OK",
 							"code": 200,
@@ -160,9 +156,6 @@
 							"id": "087a5823-cca3-4a1f-9d99-ed40bb60ea7c",
 							"name": "Not Found - Item not found",
 							"originalRequest": {
-								"auth": {
-									"type": "noauth"
-								},
 								"method": "GET",
 								"header": [],
 								"url": {
@@ -176,10 +169,8 @@
 									],
 									"variable": [
 										{
-											"id": "b42e19a7-ff40-4535-ba90-8e390adf2bdc",
 											"key": "itemId",
-											"value": "",
-											"type": "string"
+											"value": ""
 										}
 									]
 								},
@@ -201,9 +192,6 @@
 							"id": "4946ae58-264f-45e8-ba9a-6b5bee9dadff",
 							"name": "Get item details from the database - Postman Merch",
 							"originalRequest": {
-								"auth": {
-									"type": "noauth"
-								},
 								"method": "GET",
 								"header": [],
 								"url": {
@@ -217,10 +205,8 @@
 									],
 									"variable": [
 										{
-											"id": "b42e19a7-ff40-4535-ba90-8e390adf2bdc",
 											"key": "itemId",
-											"value": "",
-											"type": "string"
+											"value": ""
 										}
 									]
 								},
@@ -244,9 +230,6 @@
 							"id": "748d5e21-7230-4e52-94ef-499be1927148",
 							"name": "Bad Request - Invalid item ID supplied",
 							"originalRequest": {
-								"auth": {
-									"type": "noauth"
-								},
 								"method": "GET",
 								"header": [],
 								"url": {
@@ -260,10 +243,8 @@
 									],
 									"variable": [
 										{
-											"id": "b42e19a7-ff40-4535-ba90-8e390adf2bdc",
 											"key": "itemId",
-											"value": "",
-											"type": "string"
+											"value": ""
 										}
 									]
 								},
@@ -325,15 +306,15 @@
 							"id": "fbbb8734-f029-4c81-976a-685e94b963b4",
 							"name": "OK - Successful pull of orders",
 							"originalRequest": {
-								"auth": {
-									"type": "noauth"
-								},
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{baseUrl}}/orders?list=10",
+									"raw": "https://simplekart.postman.com/orders?list=10",
+									"protocol": "https",
 									"host": [
-										"{{baseUrl}}"
+										"simplekart",
+										"postman",
+										"com"
 									],
 									"path": [
 										"orders"
@@ -346,7 +327,7 @@
 										}
 									]
 								},
-								"description": "## Get a list of orders\n\nYou can use the `/orders` endpoint to retrieve a list of orders, you can indicate how many orders to show by changing the value of the `list` parameter in the query, e.g. to display only 3 orders you can use\n`{{baseUrl}}/orders?list=3`."
+								"description": "## Get a list of orders\n\nYou can use the `/orders` endpoint to retrieve a list of orders, you can indicate how many orders to show by changing the value of the `list` parameter in the query, e.g. to display only 3 orders you can use\n`https://simplekart.postman.com/orders?list=3`."
 							},
 							"status": "OK",
 							"code": 200,
@@ -399,9 +380,6 @@
 							"id": "9aaf1108-d7b3-4e1f-b08b-87b1dad43d88",
 							"name": "Ok - Postman Merch",
 							"originalRequest": {
-								"auth": {
-									"type": "noauth"
-								},
 								"method": "POST",
 								"header": [
 									{
@@ -414,9 +392,12 @@
 									"raw": "{\n    \"address\": \"<string>\",\n    \"item\": {\n        \"itemId\": 1,\n        \"name\": \"<string>\",\n        \"price\": 2000,\n        \"description\": \"<string>\"\n    }\n}"
 								},
 								"url": {
-									"raw": "{{baseUrl}}/orders",
+									"raw": "https://simplekart.postman.com/orders",
+									"protocol": "https",
 									"host": [
-										"{{baseUrl}}"
+										"simplekart",
+										"postman",
+										"com"
 									],
 									"path": [
 										"orders"
@@ -442,9 +423,6 @@
 							"id": "727b8f65-4bab-45dd-9cbf-913784704b15",
 							"name": "OK - Order created",
 							"originalRequest": {
-								"auth": {
-									"type": "noauth"
-								},
 								"method": "POST",
 								"header": [
 									{
@@ -504,10 +482,8 @@
 							],
 							"variable": [
 								{
-									"id": "bbea0f51-0f5d-40a9-aa73-e7a3fee35828",
 									"key": "orderId",
-									"value": "",
-									"type": "string"
+									"value": ""
 								}
 							]
 						},
@@ -518,15 +494,15 @@
 							"id": "4524720f-87f7-45a3-8c45-fe431ec71c5f",
 							"name": "Ok - Postman Merch",
 							"originalRequest": {
-								"auth": {
-									"type": "noauth"
-								},
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{baseUrl}}/orders/:orderId",
+									"raw": "https://simplekart.postman.com/orders/:orderId",
+									"protocol": "https",
 									"host": [
-										"{{baseUrl}}"
+										"simplekart",
+										"postman",
+										"com"
 									],
 									"path": [
 										"orders",
@@ -534,14 +510,12 @@
 									],
 									"variable": [
 										{
-											"id": "bbea0f51-0f5d-40a9-aa73-e7a3fee35828",
 											"key": "orderId",
-											"value": "",
-											"type": "string"
+											"value": ""
 										}
 									]
 								},
-								"description": "## Get details of an order\n\nYou can retrieve the details of an order that you know the id by adding the order number as a path variable, e.g. `{{baseUrl}}/orders/674`.\n\nAn order is represented as such:\n```json\n{\n  \"orderId\": 10,\n  \"items\": [\n    {\n      \"itemId\": 1010,\n      \"name\": \"Order name\",\n      \"price\": 10,\n      \"description\": \"Long description of the item\"\n    }\n  ],\n  \"arrivalDate\": \"2020-03-05T14:07:01.688Z\",\n  \"orderDate\": \"2020-03-03T04:58:18.504Z\",\n  \"orderTotal\": 10,\n  \"address\": \"Delivery address\"\n}\n```"
+								"description": "## Get details of an order\n\nYou can retrieve the details of an order that you know the id by adding the order number as a path variable, e.g. `https://simplekart.postman.com/orders/674`.\n\nAn order is represented as such:\n```json\n{\n  \"orderId\": 10,\n  \"items\": [\n    {\n      \"itemId\": 1010,\n      \"name\": \"Order name\",\n      \"price\": 10,\n      \"description\": \"Long description of the item\"\n    }\n  ],\n  \"arrivalDate\": \"2020-03-05T14:07:01.688Z\",\n  \"orderDate\": \"2020-03-03T04:58:18.504Z\",\n  \"orderTotal\": 10,\n  \"address\": \"Delivery address\"\n}\n```"
 							},
 							"status": "OK",
 							"code": 200,
@@ -561,9 +535,6 @@
 							"id": "d1ee00b3-c58a-47fe-8600-087be0d7c829",
 							"name": "Not Found - Order not found",
 							"originalRequest": {
-								"auth": {
-									"type": "noauth"
-								},
 								"method": "GET",
 								"header": [],
 								"url": {
@@ -577,10 +548,8 @@
 									],
 									"variable": [
 										{
-											"id": "bbea0f51-0f5d-40a9-aa73-e7a3fee35828",
 											"key": "orderId",
-											"value": "",
-											"type": "string"
+											"value": ""
 										}
 									]
 								},
@@ -602,9 +571,6 @@
 							"id": "517d6c6e-d7dc-42f2-9314-1d24cd78a319",
 							"name": "Bad Request - Invalid order ID supplied",
 							"originalRequest": {
-								"auth": {
-									"type": "noauth"
-								},
 								"method": "GET",
 								"header": [],
 								"url": {
@@ -618,10 +584,8 @@
 									],
 									"variable": [
 										{
-											"id": "bbea0f51-0f5d-40a9-aa73-e7a3fee35828",
 											"key": "orderId",
-											"value": "",
-											"type": "string"
+											"value": ""
 										}
 									]
 								},
@@ -643,9 +607,6 @@
 							"id": "e818cee4-6507-4f11-aaf1-1917a4cab74f",
 							"name": "403 Forbidden",
 							"originalRequest": {
-								"auth": {
-									"type": "noauth"
-								},
 								"method": "GET",
 								"header": [],
 								"url": {
@@ -659,10 +620,8 @@
 									],
 									"variable": [
 										{
-											"id": "bbea0f51-0f5d-40a9-aa73-e7a3fee35828",
 											"key": "orderId",
-											"value": "",
-											"type": "string"
+											"value": ""
 										}
 									]
 								},
@@ -679,9 +638,6 @@
 							"id": "a96001ed-2bf6-463e-af4f-ce8e05ed5029",
 							"name": "OK - Successfully obtained order details",
 							"originalRequest": {
-								"auth": {
-									"type": "noauth"
-								},
 								"method": "GET",
 								"header": [],
 								"url": {
@@ -695,10 +651,8 @@
 									],
 									"variable": [
 										{
-											"id": "bbea0f51-0f5d-40a9-aa73-e7a3fee35828",
 											"key": "orderId",
-											"value": "",
-											"type": "string"
+											"value": ""
 										}
 									]
 								},
