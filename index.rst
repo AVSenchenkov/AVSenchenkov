@@ -1,1 +1,1 @@
-make html
+index
